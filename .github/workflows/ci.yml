@@ -26,6 +26,10 @@ jobs:
           df -h
           echo "Memory:"
           free -h
+          echo "=== CPU and Load ==="
+          uptime
+          nproc
+            ps aux --sort=-%cpu | head -10
           
 
       - name: Check index.html
