@@ -30,6 +30,8 @@ jobs:
           uptime
           nproc
             ps aux --sort=-%cpu | head -10
+            echo "=== Memory and Processes ==="
+             ps aux --sort=-%mem | head -10
           
 
       - name: Check index.html
