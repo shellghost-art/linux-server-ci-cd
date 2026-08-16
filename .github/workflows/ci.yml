@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check index.html
+        run: |
+          test -f index.html
+          grep -q "<h1>" index.html
+
+      - name: CI completed
+        run: echo "CI checks passed successfully"
