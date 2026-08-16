@@ -14,18 +14,19 @@ jobs:
         uses: actions/checkout@v5
       
       - name: Check Linux environment
-        run:  
+        run: |
          echo "=== Linux Environment Information ==="
-         echo "User:" 
-         whoami
-         echo "Current directory:"
-         pwd
-         echo "Kernel:" 
+          echo "User:"
+          whoami
+          echo "Current directory:"
+          pwd
+          echo "Kernel:"
           uname -a
           echo "Disk usage:"
           df -h
           echo "Memory:"
           free -h
+          
 
       - name: Check index.html
         run: |
